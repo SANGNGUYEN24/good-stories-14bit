@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:good_stories/constant.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,102 +13,117 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: DefaultTabController(
+      body: DefaultTabController(
           length: 3,
-          child: NestedScrollView(
-            headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-              return <Widget>[
-                SliverAppBar(
+          child: Scaffold(
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(50),
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, right: 80, top: 0),
+                child: AppBar(
+                  shadowColor: Colors.grey,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                   backgroundColor: Colors.white,
-                  expandedHeight: 100,
-                  floating: true,
-                  pinned: false,
-                  flexibleSpace: FlexibleSpaceBar(
-                    centerTitle: true,
-                    title: Text(
-                      "Good Stories",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                    ),
-                    background: Image.network(
-                      "https://cdn.pixabay.com/photo/2021/01/27/07/19/baby-5953965__340.jpg",
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                SliverPersistentHeader(
-                  delegate: _SliverAppBarDelegate(
-                    TabBar(
-                        unselectedLabelColor: Colors.black38,
-                        indicatorSize: TabBarIndicatorSize.tab,
-                        indicator: BoxDecoration(
+                  elevation: 0.0,
+                  bottom: TabBar(
+                      unselectedLabelColor: Color(pinkCustom),
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      indicator: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Color(0xffeecda3), Color(0xffef629f)]
-                          ),
+                              colors: [Color(orangeCustom), Color(pinkCustom)]),
                           borderRadius: BorderRadius.circular(50),
+                          color: Color(0xffeecda3)),
+                      tabs: [
+                        Tab(
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("Explore"),
+                          ),
                         ),
-                        tabs: [
-                          Tab(
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Text("Explore"),
-                            ),
+                        Tab(
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("Your diary"),
                           ),
-                          Tab(
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Text("Your diary"),
-                            ),
+                        ),
+                        Tab(
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("Favorite"),
                           ),
-                          Tab(
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Text("Favorite"),
-                            ),
-                          ),
-
-                        ]),
-                  ),
-                  pinned: true,
+                        ),
+                      ]),
                 ),
-              ];
-            }, body: Container(),
-          ),
-
-        ),
-      ),
-
+              ),
+            ),
+            body: TabBarView(children: [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Container(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(width: 10,),
+                          Flexible(
+                            child: Container(
+                              height: 40,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                      borderSide: BorderSide(color: Color(orangeCustom))
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                    borderSide: BorderSide(color: Color(pinkCustom)),
+                                  ),
+                                  hintStyle: TextStyle(
+                                    color: Colors.black12
+                                  ),
+                                  hintText: "Search",
+                                  prefixIcon: Icon(Icons.search, color: Color(orangeCustom),),
+                                ),
+                                style: TextStyle(
+                                  fontSize: 13,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Tooltip(
+                            message: 'Filter',
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Icon(Icons.filter_alt, color: Color(orangeCustom),),
+                              style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      Colors.white),
+                                  shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                        side: BorderSide(
+                                          color: Color(orangeCustom)
+                                        )
+                                  ))),
+                            ),
+                          ),
+                          SizedBox(width: 10,),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Icon(Icons.movie),
+              Icon(Icons.games),
+            ]),
+          )),
     );
   }
-}
-
-class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
-  _SliverAppBarDelegate(this._tabBar);
-
-  final TabBar _tabBar;
-
-  @override
-  double get minExtent => _tabBar.preferredSize.height;
-
-  @override
-  double get maxExtent => _tabBar.preferredSize.height;
-
-  @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return new Container(
-      child: _tabBar,
-    );
-  }
-
-  @override
-  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
-      return false;
-  }
-
-// @override
-// bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {}
 }
