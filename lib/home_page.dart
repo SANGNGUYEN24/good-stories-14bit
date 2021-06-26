@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
                               height: 40,
                               child: TextField(
                                 decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.only(top: 10),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(20),
                                       borderSide: BorderSide(color: Color(orangeCustom))
@@ -85,9 +86,6 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   hintText: "Search",
                                   prefixIcon: Icon(Icons.search, color: Color(orangeCustom),),
-                                ),
-                                style: TextStyle(
-                                  fontSize: 13,
                                 ),
                               ),
                             ),
