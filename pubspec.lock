@@ -7,7 +7,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.5.0"
+    version: "2.6.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -50,6 +50,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+<<<<<<< HEAD
   expandable_text:
     dependency: "direct main"
     description:
@@ -57,6 +58,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.0"
+=======
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   fake_async:
     dependency: transitive
     description:
@@ -69,6 +72,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -76,11 +80,14 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
+=======
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -128,6 +135,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+=======
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   matcher:
     dependency: transitive
     description:
@@ -149,6 +158,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+<<<<<<< HEAD
   pedantic:
     dependency: transitive
     description:
@@ -163,6 +173,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+=======
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   sky_engine:
     dependency: transitive
     description: flutter
@@ -174,7 +186,11 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.8.0"
+=======
+    version: "1.8.1"
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   stack_trace:
     dependency: transitive
     description:
@@ -209,7 +225,11 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.2.19"
+=======
+    version: "0.3.0"
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   typed_data:
     dependency: transitive
     description:
@@ -217,6 +237,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+<<<<<<< HEAD
   url_launcher:
     dependency: "direct main"
     description:
@@ -259,6 +280,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+=======
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
   vector_math:
     dependency: transitive
     description:
@@ -268,4 +291,7 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
+<<<<<<< HEAD
   flutter: ">=2.0.0"
+=======
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce

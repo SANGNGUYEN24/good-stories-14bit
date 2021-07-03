@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: vscode_app
+=======
+name: demo_app
+>>>>>>> 2b7853ab7abd7a228b63afea15d2a24e1db0f0ce
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
