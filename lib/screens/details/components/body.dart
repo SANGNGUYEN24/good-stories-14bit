@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:vscode_app/screens/constants.dart';
-import 'package:vscode_app/screens/home/components/my_desc_profile.dart';
 
 import 'card_item.dart';
 

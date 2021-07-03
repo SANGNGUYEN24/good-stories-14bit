@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:vscode_app/styles/constants.dart';
+import 'package:vscode_app/screens/constants.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,6 +12,9 @@ class CardItem extends StatefulWidget {
     this.name,
     this.country,
     this.desc,
+    this.title,
+    this.num_favorite,
+    this.favorite,
   });
 
   final ImageProvider<Object> avatarImage;
@@ -18,14 +22,19 @@ class CardItem extends StatefulWidget {
   final String name;
   final String country; // recommend flag icon
   final String desc;
+  final String title;
+  final int num_favorite;
+  final bool favorite;
   @override
   _CardItem createState() => _CardItem(
-        avatarImage: avatarImage,
-        country: country,
-        desc: desc,
-        image: image,
-        name: name,
-      );
+      avatarImage: avatarImage,
+      country: country,
+      desc: desc,
+      image: image,
+      name: name,
+      title: title,
+      num_favorite: num_favorite,
+      favorate: favorite);
 }
 
 class _CardItem extends State<CardItem> {
@@ -35,6 +44,9 @@ class _CardItem extends State<CardItem> {
     @required this.name,
     this.country,
     this.desc,
+    this.title,
+    this.num_favorite,
+    this.favorate,
   });
 
   ImageProvider<Object> avatarImage;
@@ -42,7 +54,9 @@ class _CardItem extends State<CardItem> {
   String name;
   String country; // recommend flag icon
   String desc;
-  bool favorate = false;
+  String title;
+  int num_favorite;
+  bool favorate;
 
   @override
   Widget build(BuildContext context) {
@@ -98,12 +112,29 @@ class _CardItem extends State<CardItem> {
                   height: 14,
                 ),
                 Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    // SizedBox(
+                    //   height: 0,
+                    //   width: 0,
+                    // ),
+                    Text(
+                      title == null ? 'Add just little words Here' : title,
+                      style: TextStyle(
+                        color: kTextColor,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     Row(
                       children: [
+                        Text(
+                          num_favorite == null ? '0' : num_favorite.toString(),
+                          style: TextStyle(color: kPrimaryColor),
+                        ),
                         IconButton(
-                          icon: favorate
+                          padding: EdgeInsets.all(kDefaultPadding / 4),
+                          icon: (favorate ?? false)
                               ? Icon(
                                   Icons.favorite_rounded,
                                   color: Colors.red,
@@ -128,11 +159,10 @@ class _CardItem extends State<CardItem> {
                                     });
                                   },
                                 ),
-                                duration: const Duration(milliseconds: 1500),
-                                // width: 280.0, // Width of the SnackBar.
+                                duration: const Duration(
+                                    milliseconds: kDurationSnackbar),
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal:
-                                      8.0, // Inner padding for SnackBar content.
+                                  horizontal: kDefaultPadding,
                                 ),
                                 behavior: SnackBarBehavior.floating,
                                 shape: RoundedRectangleBorder(
@@ -141,75 +171,12 @@ class _CardItem extends State<CardItem> {
                               ),
                             );
                           },
-                          // color: Colors.grey,
                         ),
-                        // SizedBox(
-                        //   width: 8,
-                        // ),
-                        // Text(
-                        //   "Like",
-                        //   style: TextStyle(color: Colors.grey),
-                        // ),
-                      ],
-                    ),
-                    // SizedBox(
-                    //   width: 14,
-                    // ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.comment_outlined,
-                          // color: Colors.grey,
-                        ),
-                        // SizedBox(
-                        //   width: 8,
-                        // ),
-                        // Text(
-                        //   "Comment",
-                        //   style: TextStyle(color: Colors.grey),
-                        // ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 14,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.share,
-                          // color: Colors.grey,
-                        ),
-                        // SizedBox(
-                        //   width: 8,
-                        // ),
-                        // Text(
-                        //   "Share",
-                        //   style: TextStyle(color: Colors.grey),
-                        // ),
                       ],
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 12.0,
-                ),
               ],
-            ),
-          ),
-        ),
-        Container(
-          // Your description
-          padding: EdgeInsets.symmetric(
-            horizontal: kDefaultPadding,
-            vertical: kDefaultPadding / 2,
-          ),
-          // height: size.height / 5,
-          width: size.width,
-          // color: Colors.white,
-          child: RichText(
-            text: TextSpan(
-              text: '199 likes',
-              style: Theme.of(context).textTheme.button,
             ),
           ),
         ),
@@ -250,10 +217,18 @@ class _CardItem extends State<CardItem> {
   }
 
   void toggleFavorite() {
-    if (favorate == true) {
+    if (num_favorite == null) {
+      num_favorite = 0;
+    }
+    if (favorate == null) {
+      favorate = true;
+      num_favorite ++;
+    } else if (favorate == true) {
+      num_favorite == 0 ? 0 : num_favorite--;
       favorate = false;
     } else {
       favorate = true;
+      num_favorite++;
     }
   }
 

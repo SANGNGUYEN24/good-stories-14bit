@@ -7,13 +7,21 @@ const kBackgroundColor = Color(0xFFF9F8FD);
 
 const double kDefaultPadding = 20.0;
 
+const kDurationSnackbar = 1500;
+
+/// This file show all constant elements of the app
+/// pink
+const pinkCustom = Color(0xffef629f);
+///orange
+const orangeCustom = Color(0xffeecda3);
+
 var gradientColor = BoxDecoration(
   gradient: LinearGradient(
     begin: Alignment.topRight,
     end: Alignment.bottomLeft,
     colors: [
-      Color(0xeecda3),
-      Color(0xef629f)
+      pinkCustom,
+      orangeCustom
     ],
   ),
 );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vscode_app/styles/constants.dart';
+import 'package:vscode_app/screens/constants.dart';
 import 'package:vscode_app/screens/details/components/body.dart';
 
 class DetailScreen extends StatelessWidget {
