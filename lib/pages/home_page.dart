@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:good_stories/constant.dart';
-import 'package:good_stories/views/favorite.dart';
-import 'package:good_stories/views/your_diary.dart';
+import 'package:good_stories/styles/constant.dart';
+import 'package:good_stories/pages/your_diary.dart';
 
 import 'explore.dart';
+import 'favorite.dart';
 
 /// @author: sangnd
 /// @date: 29/06/2021

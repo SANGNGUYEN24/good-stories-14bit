@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 /// @author: Tri
 /// @date:
 /// This widget show a list of stories uploaded by user

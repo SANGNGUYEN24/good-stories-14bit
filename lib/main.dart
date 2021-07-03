@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:good_stories/constant.dart';
-import 'package:good_stories/views/home_page.dart';
+import 'package:good_stories/styles/constant.dart';
+import 'package:good_stories/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());

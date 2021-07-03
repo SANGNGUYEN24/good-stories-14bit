@@ -1,7 +1,7 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:good_stories/constant.dart';
+import 'package:good_stories/styles/constant.dart';
 
 /// @author: sangnd
 /// @date: 29/06/2021

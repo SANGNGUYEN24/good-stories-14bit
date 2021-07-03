@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:good_stories/views/story_favorite.dart';
-import '../constant.dart';
+import 'package:good_stories/pages/story_favorite.dart';
+import '../styles/constant.dart';
 
 /// @author: sangnd
 /// @date: 29/06/2021
