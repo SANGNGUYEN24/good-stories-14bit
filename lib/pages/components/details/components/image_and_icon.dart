@@ -5,7 +5,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:vscode_app/styles/constants.dart';
+import 'package:demo_app/styles/constants.dart';
 
 import 'icon_card.dart';
 

@@ -1,5 +1,11 @@
+/* 
+  @author: Tri Pronton
+  @date: 08/07/2021
+  * This widget is a floating action point in screen helps user choose upload by camera or gallery 
+*/
+
 import 'package:flutter/material.dart';
-import 'package:vscode_app/screens/constants.dart';
+import 'package:demo_app/styles/constants.dart';
 
 class FancyFab extends StatefulWidget {
   final Function() pressCamera;

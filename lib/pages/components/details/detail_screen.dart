@@ -5,7 +5,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:vscode_app/pages/components/details/components/body.dart';
+import 'package:demo_app/pages/components/details/components/body.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({@required this.image});

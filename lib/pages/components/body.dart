@@ -8,7 +8,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:vscode_app/styles/constants.dart';
+import 'package:demo_app/styles/constants.dart';
 
 import 'details/detail_screen.dart';
 

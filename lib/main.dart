@@ -2,9 +2,10 @@
   @author: Tri Pronton
   @date: 3/7/2021
  */
+
 import 'package:flutter/material.dart';
-import 'screens/constants.dart';
-import 'pages/yourDairy.dart';
+import 'styles/constants.dart';
+import 'pages/your_diary.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
