@@ -87,7 +87,9 @@ class _StoryFavoriteState extends State<StoryFavorite> {
         ),
       ),
 
-      /// Display all detail about stories
+      /**
+         * Display all detail about stories
+         */
       body: Padding(
           padding: EdgeInsets.all(10),
           child: Container(
@@ -133,6 +135,7 @@ class _StoryFavoriteState extends State<StoryFavorite> {
                 SizedBox(
                   height: 10,
                 ),
+                // Heading of the story
                 Text(
                   "Paragraphs & Topic Sentences",
                   style: TextStyle(
@@ -153,6 +156,7 @@ class _StoryFavoriteState extends State<StoryFavorite> {
                         style: TextStyle(
                           fontSize: 20,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
