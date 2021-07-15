@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:good_stories/pages/story_explore.dart';
+import 'package:good_stories/pages/story_details.dart';
 
 import '../styles/constant.dart';
 
@@ -170,7 +170,7 @@ class _FavoriteState extends State<Favorite> {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (builder) {
-          return StoryExplore();
+          return StoryDetails();
         }));
       },
       child: Card(
