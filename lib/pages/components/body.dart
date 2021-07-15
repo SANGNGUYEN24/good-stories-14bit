@@ -1,26 +1,26 @@
 /* 
   @author: Tri Pronton
   @date: 08/07/2021
-  * This widget show a list of stories uploaded by user
+  * This widget is body of Your Diary Screen
 */
 
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:good_stories/styles/constant.dart';
 
-import 'components/details/detail_screen.dart';
+import 'details/detail_screen.dart';
 
-
-class YourDiary extends StatefulWidget {
-  YourDiary({this.image});
-  File? image;
+class Body extends StatefulWidget {
+  Body({required this.image});
+  File image;
   @override
-  _YourDiaryState createState() => _YourDiaryState(avatar_image: image);
+  _BodyState createState() => _BodyState(avatar_image: image);
 }
 
-class _YourDiaryState extends State<YourDiary> {
-  _YourDiaryState({this.avatar_image});
+class _BodyState extends State<Body> {
+  _BodyState({this.avatar_image});
   File? avatar_image;
   // List of images' paths
   List<String> images = [
@@ -50,7 +50,7 @@ class _YourDiaryState extends State<YourDiary> {
   }
 }
 
-// widget shows seach box
+// widget shows search box
 class SearchBox extends StatelessWidget {
   const SearchBox({
     Key? key,
@@ -58,9 +58,6 @@ class SearchBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-
     return Container(
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
