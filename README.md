@@ -1,6 +1,6 @@
-# demo_app
+# walkthrough
 
-A new Flutter project.
+Wall through
 
 ## Getting Started
 
