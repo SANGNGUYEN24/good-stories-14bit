@@ -7,15 +7,14 @@ import 'package:good_stories/styles/constant.dart';
 /// @date: 29/06/2021
 /// This widget show details of the story clicked from explore page
 
-class StoryExplore extends StatefulWidget {
-  const StoryExplore({Key? key}) : super(key: key);
+class StoryDetails extends StatefulWidget {
+  const StoryDetails({Key? key}) : super(key: key);
 
   @override
-  _StoryExploreState createState() => _StoryExploreState();
+  _StoryDetailsState createState() => _StoryDetailsState();
 }
 
-class _StoryExploreState extends State<StoryExplore> {
-
+class _StoryDetailsState extends State<StoryDetails> {
   void showSnackBarMessage(String mess) {
     final snackBar = SnackBar(
       duration: Duration(seconds: 2),
@@ -97,7 +96,7 @@ class _StoryExploreState extends State<StoryExplore> {
             child: Column(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height / 4,
+                  height: MediaQuery.of(context).size.height / 5,
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -120,12 +119,14 @@ class _StoryExploreState extends State<StoryExplore> {
                             color: Colors.white,
                             border: Border.all(color: Color(orangeCustom)),
                             borderRadius: BorderRadius.all(Radius.circular(9)),
-
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("241",style: TextStyle(fontSize: 10),),
+                              Text(
+                                "241",
+                                style: TextStyle(fontSize: 10),
+                              ),
                               Flexible(
                                 child: FavoriteButton(
                                     iconSize: 24,
@@ -153,22 +154,25 @@ class _StoryExploreState extends State<StoryExplore> {
                   "Paragraphs & Topic Sentences",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 24,
                   ),
                 ),
-                SizedBox(
-                  height: 10,
+                Divider(
+                  indent: 20.0,
+                  endIndent: 20.0,
+                  color: Color(orangeCustom),
                 ),
                 Flexible(
                   child: SingleChildScrollView(
                     child: Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
+                      padding: EdgeInsets.only(left: 16, right: 16),
                       child: Text(
                         "   A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points" +
                             "Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.",
                         style: TextStyle(
                           fontSize: 20,
                         ),
+                        textAlign: TextAlign.justify,
                       ),
                     ),
                   ),

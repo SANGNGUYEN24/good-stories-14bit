@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:good_stories/pages/story_explore.dart';
+import 'package:good_stories/pages/story_details.dart';
+
 import '../styles/constant.dart';
 
 /// @author: sangnd
@@ -31,6 +32,7 @@ class _ExploreState extends State<Explore> {
                 SizedBox(
                   width: 10,
                 ),
+
                 /// Search bar for searching stories
                 Flexible(
                   child: Container(
@@ -112,7 +114,7 @@ class _ExploreState extends State<Explore> {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (builder) {
-          return StoryExplore();
+          return StoryDetails();
         }));
       },
       child: Card(

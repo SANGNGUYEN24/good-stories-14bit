@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:good_stories/styles/constant.dart';
 
+/// THIS FILE IS DEPRECATED ON 15/07/2021
 /// @author: sangnd
 /// @date: 29/06/2021
 /// This widget displays the detail of the story clicked from favorite page
@@ -87,7 +88,9 @@ class _StoryFavoriteState extends State<StoryFavorite> {
         ),
       ),
 
-      /// Display all detail about stories
+      /**
+         * Display all detail about stories
+         */
       body: Padding(
           padding: EdgeInsets.all(10),
           child: Container(
@@ -133,6 +136,7 @@ class _StoryFavoriteState extends State<StoryFavorite> {
                 SizedBox(
                   height: 10,
                 ),
+                // Heading of the story
                 Text(
                   "Paragraphs & Topic Sentences",
                   style: TextStyle(
@@ -153,6 +157,7 @@ class _StoryFavoriteState extends State<StoryFavorite> {
                         style: TextStyle(
                           fontSize: 20,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
