@@ -1,4 +1,5 @@
-import 'package:demo_app/styles/image_display.dart';
+
+import '../styles/image_display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

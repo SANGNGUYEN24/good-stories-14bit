@@ -12,6 +12,7 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>demo_app</string>
+	<string>good_stories</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

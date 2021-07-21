@@ -1,5 +1,9 @@
-import 'package:demo_app/pages/create_story.dart';
+
 import 'package:flutter/material.dart';
+import 'package:good_stories/pages/home_page.dart';
+import 'package:good_stories/styles/constant.dart';
+
+import 'pages/create_story.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,15 +11,14 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  /// Test demo pull request
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: CreateStory(),
+      title: "Good Stories",
+      theme: ThemeData(primaryColor: Color(pinkCustom)),
+      home: HomePage(),
     );
   }
 }
