@@ -1,3 +1,4 @@
+import 'package:good_stories/styles/constant.dart';
 
 import '../styles/image_display.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ final List<String> imageURL = [
 ];
 
 class CreateStory extends StatefulWidget {
-  const CreateStory({Key ? key}) : super(key: key);
+  const CreateStory({Key? key}) : super(key: key);
 
   @override
   _CreateStoryState createState() => _CreateStoryState();
@@ -27,17 +28,23 @@ class _CreateStoryState extends State<CreateStory> {
         appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.navigate_before),
+            color: Colors.white,
             onPressed: () {},
           ),
           title: imageURL.length == 1 ? Text('New image') : Text('New album'),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: getGradient(),
+            ),
+          ),
           actions: [
             Padding(
               padding: EdgeInsets.all(10.0),
               child: ElevatedButton(
-                child: Text("Public", style: TextStyle(fontSize: 14)),
+                child: Text("Public", style: TextStyle(fontSize: 16)),
                 style: ButtonStyle(
-                  //foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                  //backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                    backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF69B4)),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
@@ -59,8 +66,8 @@ class _CreateStoryState extends State<CreateStory> {
                   print(isSwitched);
                 });*/
               },
-              activeTrackColor: Colors.lightGreenAccent,
-              activeColor: Colors.green,
+              activeTrackColor: Color(orangeCustom),
+              activeColor: Color(pinkCustom),
             ),
             Container(
               margin: EdgeInsets.symmetric(),
@@ -78,19 +85,21 @@ class _CreateStoryState extends State<CreateStory> {
             Flexible(
               child: Padding(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 16),
                 child: TextField(
                   controller: null, //TODO: add textcontroller
                   onSubmitted: null, //TODO: add story handler
                   keyboardType: TextInputType.multiline,
-                  maxLines: null,
+                  maxLines: 20,
                   decoration: InputDecoration.collapsed(
                     hintText: 'Add a stoty',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(
-                        width: 0,
+                        width: 5,
                         style: BorderStyle.none,
+                        color: Color(pinkCustom),
+
                       ),
                     ),
                     //filled: true,
@@ -99,9 +108,6 @@ class _CreateStoryState extends State<CreateStory> {
               ),
             ),
           ],
-        )
-    );
+        ));
   }
-
 }
-

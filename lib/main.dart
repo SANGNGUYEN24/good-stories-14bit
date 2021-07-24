@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Good Stories",
-      theme: ThemeData(primaryColor: Color(pinkCustom)),
-      home: HomePage(),
+      theme: ThemeData(
+          primaryColor: Color(pinkCustom)),
+      home: CreateStory(),
     );
   }
 }
